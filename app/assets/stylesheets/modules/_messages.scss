@@ -1,0 +1,236 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper{
+  display: flex;
+  .side-bar{
+    height: 100vh;
+    width: 400px;
+    background-color: #3a87cf;
+
+    &__header{
+      height: 60px;
+      // background-olor: #3a87cf;
+      display: flex;
+      // align-items: center;
+      padding: 40px 40px 0px 40px;
+
+      &__items {
+        display: flex;
+        // height: 20px;
+        // background-color: #3a87cf;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: bold;
+        // justify-content: space-between;
+
+        .user {
+          // background-color: #3a87cf;
+        
+        }
+        .icons {
+          // background-color: #3a87cf;
+          width:260px;
+          // display: flex;
+          text-align: right;
+
+          a {
+            color: #ffffff;
+            margin-left: 5px;
+            text-decoration: none;
+            
+          }
+        }
+      }
+    }
+
+    &__talk-list {
+      background-color: #8ec6eb;
+      height: calc(100vh - 140px);
+
+      .container {
+        height: calc(100vh - 170px);
+        background-color: #e69620;
+        border: solid 10px #964c10;
+        line-height: 40px;
+        margin: 40px;
+        .door-flame {
+          height: calc(100vh - 230px);
+          background-color: rgb(3, 63, 33);
+          border: solid 10px #964c10;
+          margin: 20px;
+          overflow: scroll;
+
+          .side-bar__talk-list__summary {
+            color: #ffffff;
+            margin-bottom: 40px;
+            padding: 20px;
+            
+    
+            a {
+              text-decoration: none;
+            }
+    
+            .talk-list_link {
+              text-decoration: none;
+            }
+    
+            .name {
+              font-size: 15px;
+              margin-bottom: 5px;
+              color: #ffffff;
+              text-decoration: none;
+            }
+    
+            .latest-message {
+              font-size: 11px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .main-chat {
+    width: calc(100vw - 300px);
+    background-color: white;
+
+    &__header {
+      height: 100px;
+      background-color: #3a87cf;
+      padding: 0px 40px 0px 40px; 
+      display: flex;
+      justify-content: space-between;
+      border-bottom: solid 1px #eee;
+
+      .left-box {
+        padding: 35px 0px 15px 0px; 
+
+        .talk-name {
+          font-size: 20px;
+          color: #333333;
+          margin-bottom: 15px;
+        }
+        
+        .member-list {
+          display: flex;
+          font-size: 12px;
+          color: #999999;
+          
+          p {
+            margin-right: 5px;
+          }
+        }
+      }
+      .edit-btn {
+        display: flex;
+        border: solid 1px #38aef0;
+        width: 72px;
+        height: 40px;
+        margin-top: 28px;
+        padding: 0px 20px 0px 20px; 
+        font-size: 16px;
+        color: #38aef0;
+        line-height: 40px;
+        background-color: white;
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .main-chat__messages {
+      height: calc(100vh - 190px);
+      padding: 35px 40px 35px 40px; 
+      overflow: scroll;
+
+      .main-chat__messages__date-massage__upper-info {
+        padding-bottom: 35px;
+      
+        .main-chat__messages__date-massage__upper-info__berths {
+          margin-bottom: 12px;
+
+          .upper-message {
+            display: flex;
+
+            .talker {
+              font-size: 16px;
+              color: #333333;
+              font-weight: bold;
+            }
+  
+            .date {
+              font-size: 12px;
+              color: #999999;
+              margin-left: 10px;
+            }
+          }
+          .main-chat__messages__deta-massage__text {
+            font-size: 14px;
+            color: #434A54;
+            margin-bottom: 46px;
+          }
+        }
+      }
+    }
+
+    &__form {
+      height: 90px;
+      background-color: #c0842a;
+      padding: 20px 40px;
+      
+      &__new_message {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        color: #000;
+        
+
+        &__input-box {
+          display: flex;
+          position: relative;
+          width: 100%;
+
+          &__message {
+            width: 100%;
+            padding-left: 10px;
+          }
+
+          &__image {
+            position: absolute;
+            top:16px;
+            right:10px;
+          
+            
+            .icon {
+              color: #000;
+            }
+
+            .images {
+              color: #000;
+              display: none;
+            }
+          }
+        }
+
+
+        &__send-btn {
+          border: solid 1px #38aef0;
+          width: 100px;
+          height: 50px;
+          font-size: 16px;
+          background-color: #38aef0;
+          line-height: 40px;
+          margin-left: 20px;
+          color: white;
+        }
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
