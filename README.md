@@ -22,13 +22,13 @@
    * 人に認めてもらう必要のない安心感、自信、自己肯定感を覚えてほしい
 
 
-## Description
+### Description
 ・ ユーザー登録機能
 ・ カルテ登録機能
 ・ チャット機能
 
 
-## Usage
+### Usage
 
 1.ユーザー登録機能について
 名前、Email、Passwordでユーザーの新規登録ができます。
@@ -48,7 +48,7 @@
 真面目な人ほど抱え込んでしまうし、そんな自分に罪悪感を持ってしまう方は多いと感じていたので、そういった方に寄り添い、後悔のない選択ができるよう一緒に話し合いを重ねて行けたらとこのアプリケーションの開発を行いました。
 
 
-## 今後の実装予定
+### 今後の実装予定
 ・ 登録した情報をマイページから確認できる
 ・ メッセージのみでなく画像の送信も行える
 ・ 通話機能
@@ -69,7 +69,7 @@
 |profile|text||
 |id|string|null: false, unique: true|
 
-## Association
+### Association
 - has_many :casts
 - has_many :gests
 <!-- - has_many :groups, through: :groups_users
@@ -88,7 +88,7 @@
 |profile|text||
 |id|string|null: false, unique: true|
 
-## Association
+### Association
 - belongs_to :host
 - has_many :gests
 <!-- - has_many :groups, through: :groups_users
@@ -111,7 +111,7 @@
 |remarks|text||
 |id|string|null: false, unique: true|
 
-## Association
+### Association
 - belongs_to :host
 - belongs_to :casts
 <!-- - has_many :groups, through: :groups_users
@@ -162,7 +162,7 @@
 |cast_id|refarences|null: false, unique: true|
 |gest_id|refarences|null: false, unique: true|
 
-## Association
+### Association
 - belongs_to :host
 - belongs_to :casts
 - belongs_to :gests
@@ -179,7 +179,8 @@
 |cast_id|refarences|null: false, unique: true|
 |gest_id|refarences|null: false, unique: true|
 |group_id|refarences|null: false, foreign_key: true|
-## Association
+
+### Association
 - belongs_to :host
 - belongs_to :casts
 - belongs_to :gests
