@@ -17,7 +17,6 @@ class DeviseCreateHost < ActiveRecord::Migration[5.2]
       t.datetime :remember_created_at
       t.string   :name, null: false
       t.text     :profile
-      t.string   :id, null: false, unique: true
 
 
       ## Trackable

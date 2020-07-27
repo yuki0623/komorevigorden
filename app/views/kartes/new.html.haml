@@ -1,0 +1,77 @@
+.wrapper
+  .karte-page
+    = form_with(model: @karte, local: true) do |form|
+      .header
+        .header-bar
+          .icon
+            %i.fab.fa-elementor
+          .name
+            %hi Karte
+      .main-space
+        .hearing-top
+          .q1
+            .nickname
+              %p ニックネーム
+              .input-form
+                = form.text_field :nickname, placeholder: 'からあげ'
+            .gender_identities
+              %p 性別
+              .input-form
+                = form.text_field :gender_identities, placeholder: '男性、女性、どちらでもない'
+          .q2
+            .birthday
+              %p 生年月日
+              .input-form
+                = form.text_field :birthday, placeholder: '1990年04月05日'
+            .age
+              %p 年齢
+              .input-form
+                = form.text_field :age, placeholder: '30歳'
+          .q3
+            .from
+              %p お住まいの地域
+              .input-form
+                = form.text_field :from, placeholder: '東京'
+    
+        .hearing-bottom
+          .consultation_content
+            %p お話ししたいこと
+            .input-form
+              = form.text_area :consultation_content, placeholder: '相談内容'
+          .hearing1
+            %p 現在服用中のお薬はありますか
+            .input-form
+              = form.radio_button :hearing1, "なし"
+              = form.label :hearing1, "なし"
+              = form.radio_button :hearing1, "はい"
+              = form.label :hearing1, "はい"
+          .hearing2
+            %p 普段はよく眠れていますか
+            .input-form
+              = form.radio_button :hearing2, "いいえ"
+              = form.label :hearing12, "いいえ"
+              = form.radio_button :hearing2, "はい"
+              = form.label :hearing2, "はい"
+          .hearing3
+            %p 女性の方のみ
+            .input-form-comment
+              %p 妊娠中ですか
+              .input-form
+                = form.radio_button :hearing3, "いいえ"
+                = form.label :hearing3, "いいえ"
+                = form.radio_button :hearing3, "はい"
+                = form.label :hearing3, "はい"
+          .hearing4
+            %p 授乳中ですか
+            .input-form
+              = form.radio_button :hearing4, "いいえ"
+              = form.label :hearing4, "いいえ"
+              = form.radio_button :hearing4, "はい"
+              = form.label :hearing4, "はい"
+          .remarks
+            %p その他気になることがございましたらお書きください
+            .input-form
+              = form.text_area :remarks, placeholder: '備考'
+          .send-btn
+            = button_tag "決定", type: 'submit'
+          

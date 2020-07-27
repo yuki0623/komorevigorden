@@ -1,27 +1,57 @@
-# README
+# komorevigorden
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+環境や立場が故に声を上げ辛い方々が心の内を話せる場になるWEBアプリケーション
+・テスト用アカウントユーザー名 name:gests, email:gests@com, pass:gests0623
 
-Things you may want to cover:
 
-* Ruby version
+# 開発環境
+・ ruby 2.5.1
+・ Rails 5.2.4.3
+・ MYSQL
+・ heroku
 
-* System dependencies
 
-* Configuration
+# Purpose
+・ 表立って相談できない人達が本音を話せる場にするため
+・ 様々な事情を抱え誰にも相談できずに抱え込んでしまう人達が、人に話すことによって見つめ直し後悔しない選択ができるようにするため
+・ このアプリを通し、４つのことを今後大事にしてほしいため
+   * 自分で自分の価値を下げないこと
+   * 自分に自信を持ち、等身大の自分を肯定してほしい
+   * 現状は自分で変えることができると考えられるようになってほしい
+   * 人に認めてもらう必要のない安心感、自信、自己肯定感を覚えてほしい
 
-* Database creation
 
-* Database initialization
+# Description
+・ ユーザー登録機能
+・ カルテ登録機能
+・ チャット機能
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+# Usage
 
-* Deployment instructions
+1.ユーザー登録機能について
 
-* ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## hostテーブル
 |Column|Type|Options|
@@ -36,8 +66,8 @@ Things you may want to cover:
 ## Association
 - has_many :casts
 - has_many :gests
-- has_many :groups, through: :groups_users
-- has_many :groups_users
+<!-- - has_many :groups, through: :groups_users
+- has_many :groups_users -->
 - has_many :messages
 - has_many :kartes
 
@@ -55,8 +85,8 @@ Things you may want to cover:
 ## Association
 - belongs_to :host
 - has_many :gests
-- has_many :groups, through: :groups_users
-- has_many :groups_users
+<!-- - has_many :groups, through: :groups_users
+- has_many :groups_users -->
 - has_many :messages
 - has_many :kartes
 
@@ -78,14 +108,14 @@ Things you may want to cover:
 ## Association
 - belongs_to :host
 - belongs_to :casts
-- has_many :groups, through: :groups_users
-- has_many :groups_users
+<!-- - has_many :groups, through: :groups_users
+- has_many :groups_users -->
 - has_many :messages
 - has_one :kartes
 
 
 
-## groups_usersテーブル
+<!-- ## groups_usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -111,6 +141,7 @@ Things you may want to cover:
 - has_many :gests,through: :groups_users
 - has_many :groups_users
 - has_many :messages
+- has_many :kartes -->
 
 
 
@@ -129,7 +160,6 @@ Things you may want to cover:
 - belongs_to :host
 - belongs_to :casts
 - belongs_to :gests
-- belongs_to :group
 - has_many :messages
 
 
@@ -137,10 +167,8 @@ Things you may want to cover:
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|sentences|text|null: false|
-<!-- |send-date-and-time|datetime|null: false| -->
-|image|string||
-|id|string|null: false, unique: true|
+|content|text|null: false|
+|image|text||
 |host_id|references|null: false, unique: true|
 |cast_id|refarences|null: false, unique: true|
 |gest_id|refarences|null: false, unique: true|
@@ -149,6 +177,6 @@ Things you may want to cover:
 - belongs_to :host
 - belongs_to :casts
 - belongs_to :gests
-- belongs_to :group
+<!-- - belongs_to :group -->
 - belongs_to :kartes
 

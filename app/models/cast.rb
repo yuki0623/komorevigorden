@@ -5,10 +5,6 @@ class Cast < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates  :name, presence: true, uniqueness: true
-  belongs_to :host
-  has_many   :gests
-  has_many   :group_users
-  has_many   :groups, through: :group_users
   has_many   :messages
   has_many   :kartes
 end

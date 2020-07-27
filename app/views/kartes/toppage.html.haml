@@ -1,0 +1,146 @@
+.wrapper
+  .top-page
+    .top-page__header1
+      .top-page__header2
+        -# %h1 komorevigorden
+      .top-page__header__category
+        .tell
+          %p お電話
+          .tell__icon
+            %i.fas.fa-phone-square
+        .chat
+          %p ご相談
+          .chat__icon
+            = link_to new_karte_path do
+              %i.far.fa-comments
+
+        .reservation
+          %p 予約
+          .reservation__icon
+            %i.far.fa-calendar-alt
+        .menu
+          %p MENU
+          .menu__icon
+            %i.fas.fa-align-justify
+
+    .top-page__main
+      .signed_in
+        - if gest_signed_in?
+          = link_to "ログアウト", destroy_gest_session_path, method: :delete
+        - else
+          = link_to "ログイン", new_gest_session_path
+          = link_to "新規登録", new_gest_registration_path
+  
+        - if cast_signed_in?
+          = link_to "ログアウト", destroy_cast_session_path, method: :delete
+        - else
+          = link_to "ログイン", new_cast_session_path
+          = link_to "新規登録", new_cast_registration_path
+  
+        - if host_signed_in?
+          = link_to "ログアウト", destroy_host_session_path, method: :delete
+        - else
+          = link_to "ログイン", new_host_session_path
+          = link_to "新規登録", new_host_registration_path
+  
+      .top-page__main__visual
+        .name_container
+          .name='Dinesh Balaji'
+          .designation='Designer & Developer'
+        .top-page__main__visual__comment
+          .komorebi-e
+            %P komorebi
+            .komorebi-j
+              %p 木漏れ日
+          .vigor-e
+            %P vigor
+            .vigor-j
+              %p 活力、元気
+          .den-e
+            %p den
+            .den-j
+              %p 隠れ家
+              
+      .top-page__main__bar
+        .picture
+          = image_tag '/assets/1193651_s.jpg'
+          = image_tag '/assets/3369870_s.jpg'
+          = image_tag '/assets/1820829_s.jpg'
+          = image_tag '/assets/3381902_s.jpg'
+        
+      .top-page__main__message
+        %h1 ご挨拶
+        %p 初めまして
+        %p ここでは環境や立場が故に表立って声を上げづらい方達の、
+        %p 本音を打ち明けられる場所、
+        %p 相談できる場所です。
+        %p 様々な事情を抱え、誰にも相談出来ずに一人で抱え込んでしまう人達が、
+        %p 後悔しない選択ができるようにお手伝いできればと思っています。
+        %p こちらでお伝えしたいことは
+        %p ー自分で自分の価値を下げないでほしい
+        %p ー自分に自信を持ち、等身大の自分を肯定してほしい
+        %p ー現状は自分次第で変えることができると考えられるようになってほしい
+        %p ー人に認めてもらう必要のない安心感、自信、自己肯定感を覚えてほしい
+        %p この４つです。
+        %p そのままのあなたのお話しをお聞かせください。
+
+      .top-page__main__news-event
+        %h1 NEWS & EVENT
+        %p 最新の投稿はありません
+
+      .top-page__main__schedule
+        %table.biz-hour
+          %tbody
+            %tr
+              %th 受付時間
+              %th 月
+              %th 火
+              %th 水
+              %th 木
+              %th 金
+              %th.sat 土
+              %th.sun 日
+            %tr
+              %td 10:00〜12:00
+              %td ●
+              / 月
+              %td ●
+              / 火
+              %td ●
+              / 水
+              %td ●
+              / 木
+              %td ●
+              / 金
+              %td ー
+              / 土
+              %td ー
+              / 日
+            %tr
+              %td 21:00〜24:00
+              %td ●
+              / 月
+              %td ー
+              / 火
+              %td ●
+              / 水
+              %td ー
+              / 木
+              %td ●
+              / 金
+              %td ー
+              / 土
+              %td ー
+              / 日
+        %p お休み / 土日祝
+
+    .top-page__footer
+      .top-page__footer__comment
+        %p [月.水.金] 10:00 ~ 12:00 / 21:00 ~ 24:00
+        %p [火.木] 10:00 ~ 12:00
+        %p お休み / 土日祝
+  
+        .actions
+          -# = form.submit "相談予約" , class:"btn"
+      .top-page__footer__logo
+        -# %h1 komorevigorden

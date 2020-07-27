@@ -15,9 +15,6 @@ class DeviseCreateCasts < ActiveRecord::Migration[5.2]
       ## Rememberable
       t.datetime :remember_created_at
       t.string   :name, null: false
-      t.text     :profile
-      t.string   :id, null: false, unique: true
-
 
       ## Trackable
       # t.integer  :sign_in_count, default: 0, null: false

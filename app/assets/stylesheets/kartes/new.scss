@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+
+  .karte-page{
+    overflow:scroll;
+    width: 100%;
+
+    .header {
+      height: 130px;
+      width: 100%;
+      background-color:rgb(221, 164, 204);
+
+      .header-bar {
+        display: flex;
+        font-size: 60px;
+        padding-top: 30px;
+        justify-content: center;
+        .icon {
+          color: black;
+        }
+  
+        .name {
+          padding-left: 20px;
+          color: white;
+        }
+
+      }
+    }
+  
+    .main-space {
+      border: 5px solid rgb(116, 68, 6);
+      margin: 50px;
+
+      .hearing-top {
+        border: 5px solid rgb(177, 174, 171);
+        margin: 50px;
+        color: rgb(116, 68, 6);
+        padding: 30px;
+
+        .q1{
+        display: flex;
+        .nickname{
+          width: 50%;
+          height: 25px;
+          margin-bottom: 40px;
+          margin-right: 10px;
+          .input-form{
+            width: 100%;
+
+            input{
+              width: 100%;
+            }
+          }
+        }
+
+        .gender_identities{
+          width: 50%;
+          height: 25px;
+          margin-bottom: 40px;
+
+          .input-form{
+            width: 100%;
+
+            input{
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .q2{
+        display: flex;
+        .birthday{
+          width: 50%;
+          margin-top: 5px;
+          height: 25px;
+          margin-bottom: 40px;
+          margin-right: 10px;
+          .input-form{
+            width: 100%;
+
+            input{
+              width: 100%;
+            }
+          }
+        }
+
+        .age{
+          width: 50%;
+          margin-top: 5px;
+          height: 25px;
+          margin-bottom: 40px;
+
+          .input-form{
+            width: 100%;
+
+            input{
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .q3{
+
+        .from{
+          width: 50%;
+          margin-top: 5px;
+          height: 25px;
+          margin-bottom: 40px;
+          margin-right: 10px;
+          .input-form{
+            width: 100%;
+
+            input{
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .hearing-bottom{
+      border: 5px solid rgb(177, 174, 171);
+      margin: 50px;
+      color: rgb(116, 68, 6);
+      padding: 30px;
+      
+      .consultation_content {
+        width: 50%;
+        margin-bottom: 40px;
+        margin-right: 10px;
+        .input-form{
+          width: 100%;
+          textarea{
+            width: 100%;
+          }
+        }
+      }
+
+      .hearing1{
+        width: 50%;
+        height: 25px;
+        margin-bottom: 40px;
+        margin-right: 10px;
+        
+        .input-form{
+          width: 100%;
+          display: flex;
+
+          input{
+            height: 25px;
+          }
+
+          label{
+            margin-right: 10px;
+          }
+        }
+      }
+      .hearing2{
+        width: 50%;
+        height: 25px;
+        margin-bottom: 40px;
+        margin-right: 10px;
+        .input-form{
+          width: 100%;
+          height:  100%;
+          display: flex;
+
+          input{
+            height: 25px;
+          }
+
+          label{
+            margin-right: 10px;
+          }
+        }
+      }
+      .hearing3{
+        width: 50%;
+        height: 25px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+
+        .input-form-comment{
+          display: flex;
+
+          .input-form{
+            width: 50%;
+            height:  100%;
+            display: flex;
+            margin-left: 20px;
+  
+            input{
+              height: 25px;
+              margin-left: 10px;
+            }
+          }
+      }
+      }
+
+      .hearing4 {
+        width: 50%;
+        height: 25px;
+        margin-bottom: 40px;
+        margin-right: 10px;
+        display: flex;
+
+        .input-form{
+          width: 50%;
+          height: 100%;
+          display: flex;
+          margin-left: 20px;
+
+          input{
+            height: 25px;
+            margin-left: 10px;
+          }
+        }
+      }
+
+
+      .remarks{
+        width: 50%;
+        margin-bottom: 40px;
+        margin-right: 10px;
+        .input-form{
+          width: 100%;
+
+          textarea{
+            width: 100%;
+          }
+        }
+      }
+
+    .send-btn{
+      width: 100px;
+      margin: 0 auto;
+      
+      input{
+        width: 80px;
+        height: 40px;
+        color:white;
+        background-color: rgb(221, 164, 204);
+        border: none;
+      }
+    }
+  }
+  }
+  }
+}    

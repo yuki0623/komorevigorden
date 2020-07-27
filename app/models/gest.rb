@@ -5,10 +5,6 @@ class Gest < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :name, presence: true, uniqueness: true
-  belongs_to :host
-  belongs_to :casts
-  has_many :group_users
-  has_many :groups, through: :group_users
   has_many :messages
   has_one  :kartes
 end

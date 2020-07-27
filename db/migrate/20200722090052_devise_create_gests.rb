@@ -14,14 +14,13 @@ class DeviseCreateGests < ActiveRecord::Migration[5.2]
 
       ## Rememberable
       t.datetime :remember_created_at
-      t.string   :name,     null: false
-      t.string   :age,      null: false
-      t.string   :from,     null: false
-      t.decimal  :birthday, null: false
-      t.string   :nickname, null: false
+      t.string   :name
+      t.string   :age
+      t.string   :from
+      t.decimal  :birthday
+      t.string   :nickname
       t.text     :remarks
-      t.string   :id,       null: false, unique: true
-
+      
       ## Trackable
       # t.integer  :sign_in_count, default: 0, null: false
       # t.datetime :current_sign_in_at

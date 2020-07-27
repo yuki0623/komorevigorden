@@ -1,0 +1,364 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic", "メイリオ", "Meiryo", sans-serif;
+
+  .top-page {
+    overflow:scroll;
+
+    .top-page__header1 {
+      display: flex;
+      border-bottom: solid 1px rgb(158, 102, 50);
+      cursor: pointer;
+
+      .top-page__header2 {
+        width: 1000px;
+        height: 100px;
+        font-size: 60px;
+        margin: 20px 20px 20px 40px;
+        margin-bottom: 30px;
+        background-image: url(/assets/name.logo.jpg);
+        background-size: cover;
+      }
+  
+      .top-page__header__category {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        font-size: 15px;
+        color: rgb(95, 56, 24);
+        justify-content: space-between;
+        padding-left: 110px;
+        padding-right: 110px;
+        padding-top: 20px;
+
+        .tell {
+          display: box;
+          width: 60px;
+          height: 60px;
+          text-align: center;
+          line-height: 30px;
+          .tell__icon{
+            font-size: 60px;
+            color: pink;
+          }
+        }
+        .chat {
+          display: box;
+          width: 60px;
+          height: 60px;
+          text-align: center;
+          line-height: 30px;
+
+          .chat__icon{
+            font-size: 60px;
+            color: pink;
+
+            a{
+              i{
+                text-decoration: none;
+                color: pink;
+              }
+            }
+          }
+        }
+        .reservation {
+          display: box;
+          width: 60px;
+          height: 60px;
+          text-align: center;
+          line-height: 30px;
+          .reservation__icon{
+            font-size: 60px;
+            color: pink;
+          }
+        }
+        .menu {
+          display: box;
+          width: 60px;
+          height: 60px;
+          text-align: center;
+          line-height: 30px;
+          .menu__icon {
+            font-size: 60px;
+            color: pink;
+          }
+        }
+      }
+    }
+    .top-page__main {
+
+      .signed_in {
+        text-align: right;
+        margin-right: 120px;
+        text-decoration: none;
+
+        a{
+          color: rgb(95, 56, 24);
+        }
+      }
+
+      .top-page__main__visual {
+        margin: 80px auto;
+        height: 700px;
+        width: 1200px;
+        background-image: url(/assets/209724_m.jpg);
+        background-size: cover;
+        font-size: 20px;
+
+        @import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+          html, body {
+            width: 100%;
+            height: 100%;
+          }
+          
+          .wrapper {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1440688807730-73e4e2169fb8?format=auto&auto=compress&dpr=2&crop=entropy&fit=crop&w=1920&h=1282&q=80');
+            background-size: cover;
+            -webkit-filter: blur(0px);
+            filter: blur(0px);
+            overflow: hidden;
+          }
+          
+          .circle_container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 10px;
+            transform-origin: left center;
+            .circle {
+              position: absolute;
+              border-radius: 100%;
+              background: rgba(255, 255, 255, 0.3);
+              left: 0;
+              opacity: 0;
+              animation-name: move;
+              animation-duration: 20s;
+              animation-iteration-count: infinite;
+            }
+          }
+          
+          @keyframes move {
+            0% {
+              transform: translateX(0px);
+              opacity: 0;
+            }
+          
+            1% {
+              opacity: 1;
+            }
+          
+            50% {
+              opacity: 0.5;
+            }
+          
+            100% {
+              transform: translateX(70vmin);
+              opacity: 0;
+            }
+          }
+          
+          
+          .wrapper .name_container {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 80vmin;
+            height: 80vmin;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 100%;
+            box-shadow: inset 0px 0px 30px 30px rgba(200, 200, 200, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            > div {
+              font-family: 'Pacifico', cursive;
+              color: rgba(255, 255, 255, 0.7);
+            }
+            .name {
+              font-size: 5.5vmax;
+            }
+            .designation {
+              margin-top: 10px;
+              font-size: 2vmax;
+            }
+          }
+
+
+
+        .top-page__main__visual__comment {
+          padding-left: 900px;
+          padding-top: 100px;
+          color: white;
+          font-family: "ヒラギノ明朝 Pro W3","Hiragino Mincho Pro", sans-serif;
+
+          .komorebi-e {
+            display: flex;
+          }
+            .komorebi-j {
+              margin-left: 10px;
+            }
+  
+          .vigor-e {
+            display: flex;
+          }
+            .vigor-j {
+              margin-left: 52px;
+            }
+  
+          .den-e {
+            display: flex;
+          }
+            .den-j {
+              margin-left: 65px;
+          }
+        }
+      }
+
+      .top-page__main__bar {
+        height: 150px;
+        width: 100%;
+        background-color: rgb(180, 223, 243);
+        
+        .picture {
+          object-fit: contain;
+          height: 130px;
+          display: flex;
+          justify-content: space-between;
+          margin: 10px 50px;
+      
+          img {
+            object-fit: contain;
+            height: 130px;
+            width: 150px;
+          }
+        }
+      }
+
+      .top-page__main__message {
+        margin: auto;
+        margin-top: 100px;
+        writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        background-image: url(/assets/3659262_m.jpg);
+        background-size: cover;
+        height: 700px;
+        width: 1200px;
+
+        h1{
+          margin: 100px 40px 20px 40px;
+          font-size: 30px;
+          color:rgb(192, 169, 39);
+
+        }
+
+        p{
+          margin-top: 100px;
+          color:rgb(95, 56, 24);
+          line-height: 45px;
+        }
+
+      }
+
+      .top-page__main__news-event{
+        border-top: solid 1px rgb(158, 102, 50);
+        margin-top: 100px;
+        margin-bottom: 100px;
+        h1{
+          font-size: 30px;
+          color:rgb(192, 169, 39);
+          margin-top: 40px;
+          margin-bottom: 20px;
+          margin-left: 40px;
+        }
+        p{
+          color:rgb(95, 56, 24);
+          margin-left: 40px;
+        }
+      }
+
+
+      .top-page__main__schedule{
+        margin-top: 20px;
+        margin-left: 40px;
+        .biz-hour {
+          border-collapse: collapse;
+        }
+        @media screen and (max-width: 414px) {
+          .biz-hour {/* スマホのときだけ親要素いっぱいに */
+            width: 100%;
+          }
+        }
+        .biz-hour th {
+          /* １番上の線 */
+          /* #A28C63っていうのが色の名前なので、ここをお好みで */
+          border-top: 1px solid #A28C63;
+        }
+        .biz-hour th, .biz-hour td {
+          padding: 10px 20px;
+          text-align: center;
+          /* ２番目以降の線 */
+          /* 色はお好みで */
+          border-bottom: 1px solid #A28C63;
+        }
+        
+        /* 上段の背景色 */
+        .biz-hour th {
+          /* background: pink; */
+          font-weight: normal;
+        }
+        
+        /* 土曜日の文字色 */
+        .biz-hour th.sat {
+          color: #3db2da;
+        }
+        
+        /* 日曜日の文字色 */
+        .biz-hour th.sun {
+          color: #e66a6a;
+        }
+
+        p{
+          margin: 20px;
+
+        }
+      }
+    }
+
+    .top-page__footer {
+      background-color: #a87979;
+      height: 250px;
+      width: 100%;
+      .top-page__footer__comment {
+        margin-top: 50px;
+        display: flex;
+  
+        p{
+          color: rgb(95, 56, 24);
+          font-size: 14px;
+          margin: 40px 0px 40px 40px;
+        }
+      }
+      .top-page__footer__logo {
+        width: 400px;
+        height: 60px;
+        background-image: url(/assets/name.logo.clear.jpg);
+        background-size: cover;
+        margin: auto;
+        
+      }
+    }
+
+  }
+}
