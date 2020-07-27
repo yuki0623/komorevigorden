@@ -52,3 +52,8 @@ production:
   database: komorevigarden_production
   username: komorevigarden
   password: <%= ENV['KOMOREVIGARDEN_DATABASE_PASSWORD'] %>
+production:
+  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5

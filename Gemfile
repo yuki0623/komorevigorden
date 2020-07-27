@@ -66,3 +66,8 @@ gem 'font-awesome-sass'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'rack', '~> 2.2.3'
+
+group :production do
+  gem 'pg'
+end
+
