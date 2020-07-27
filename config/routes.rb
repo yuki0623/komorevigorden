@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   root "kartes#toppage"
   # root "messages#index"
   
-  devise_for :host, controllers: {
-    sessions: 'host/sessions',
-    passwords: 'host/passwords',
-    registrations: 'host/registrations'
+  devise_for :hosts, controllers: {
+    sessions: 'hosts/sessions',
+    passwords: 'hosts/passwords',
+    registrations: 'hosts/registrations'
   }
 
   devise_for :casts, controllers: {
@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   }
 
 
-  resources :host, only: [:index, :new, :create, :edit, :update] do
+  resources :hosts, only: [:index, :new, :create, :edit, :update] do
     resources :messages, only: [:index, :create, :edit, :update]
     namespace :api do
       resources :messages, only: :index, defaults: { format: 'json' }
