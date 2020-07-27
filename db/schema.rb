@@ -62,7 +62,11 @@ ActiveRecord::Schema.define(version: 2020_07_25_043956) do
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
+    t.integer "password"
+    t.integer "hostpassword"
     t.datetime "remember_created_at"
+    t.string "name", null: false
+    t.text "profile"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_hosts_on_email", unique: true
