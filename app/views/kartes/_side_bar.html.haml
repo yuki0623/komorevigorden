@@ -1,0 +1,23 @@
+.side-bar
+  .side-bar__header
+    .side-bar__header__items
+      .user
+        = current_gest.name
+      .icons
+        = link_to new_gest_path do
+          = icon('far','edit')
+        = link_to edit_gest_path(current_gest) do
+          = icon('fas','cog', class: 'icon')
+
+  .side-bar__talk-list
+    -# - current_gest.gests.each do |gest|
+    .container
+      .side-bar__talk-list__summary
+        - @gests.each do |gest|
+          = link_to "#{gest.name}とのtalk", kartes_path(@karte)
+        .latest-message
+          -# = gests.show_last_message
+          %p 最新のメッセージはありません
+
+
+    

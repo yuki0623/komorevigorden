@@ -1,0 +1,30 @@
+.main-chat
+  .main-chat__header
+    .left-box
+      .talk-name
+        = "#{current_gest.name}とのtalk"
+      .member-list
+        %p Member:
+        -# - @group.users.each do |user|
+        -#   = user.name 
+  
+        -# = link_to edit_group_path(@group) do
+
+    .edit-btn
+      Edit
+
+  .main-chat__messages
+    -# = render @message
+    .decoration
+
+  .form
+    = form_for messages_index_path do |f|
+      .new_message
+        .input-box
+          = f.text_field :content, class: 'input-box__message', placeholder: 'type a message' 
+          .input-box__image
+            = f.label :image, class: 'image' do
+              = icon('fas', 'image' ,class: 'icon')
+              = f.file_field :image, class: 'images'
+        = f.submit 'send', class: 'send-btn'
+    

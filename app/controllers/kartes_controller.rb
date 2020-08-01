@@ -12,7 +12,7 @@ class KartesController < ApplicationController
   def create
     @karte = Karte.new(karte_params)
     if @karte.save
-      redirect_to messages_index_path
+      redirect_to karte_path(@karte)
     else
       render :new
     end
@@ -21,6 +21,9 @@ class KartesController < ApplicationController
   def toppage
   end
 
+  def show
+    @gests = Gest.all
+  end
 
 
   private

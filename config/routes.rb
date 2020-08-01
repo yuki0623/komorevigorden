@@ -24,7 +24,6 @@ Rails.application.routes.draw do
 
 
   resources :hosts, only: [:index, :new, :create, :edit, :update] do
-    resources :messages, only: [:index, :create, :edit, :update]
     namespace :api do
       resources :messages, only: :index, defaults: { format: 'json' }
     end
@@ -32,7 +31,6 @@ Rails.application.routes.draw do
 
 
   resources :casts, only: [:index, :new, :create, :edit, :update] do
-    resources :messages, only: [:index, :create, :edit, :update]
     namespace :api do
       resources :messages, only: :index, defaults: { format: 'json' }
     end
@@ -40,7 +38,6 @@ Rails.application.routes.draw do
 
 
   resources :gests, only: [:index, :new, :create, :edit, :update] do
-    resources :messages, only: [:index, :create,]
     namespace :api do
       resources :messages, only: :index, defaults: { format: 'json' }
     end
@@ -53,9 +50,6 @@ Rails.application.routes.draw do
       get 'toppage'
     end
   end
-
-  
-
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

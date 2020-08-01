@@ -3,17 +3,19 @@ class MessagesController < ApplicationController
 
   def index
     @message = Message.new
-    # @messages= @group.messages.includes(:user)
+    @gests = Gest.all
+    # @messages= @gest.messages.includes(:gest)
   end
 
   def create
-    @message = @group.messages.new(message_params)
+    @message = Message.new(message_params)
     if @message.save
       respond_to do |format|
+        format.html { redirect_to gest_messages_path(@gest), notice: 'メッセージが送信されました' }
         format.json
       end
     else
-      @messages = @group.messages.includes(:user)
+      @messages = @gest.messages.includes(:user)
       flash.now[:alert] = 'メッセージを入力してください。'
       render :index
     end
@@ -22,7 +24,7 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
+    params.require(:message).permit(:content, :image).merge(host_id: current_host.id, cast_id: current_cast.id, gest_id: current_gest.id)
   end
 
   # def set_group
