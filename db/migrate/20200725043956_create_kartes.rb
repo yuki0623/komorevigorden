@@ -14,8 +14,8 @@ class CreateKartes < ActiveRecord::Migration[5.2]
       t.text     :remarks
 
       t.references :host
-      t.references :casts
-      t.references :gests
+      t.references :cast
+      t.references :gest
 
       t.timestamps
     end

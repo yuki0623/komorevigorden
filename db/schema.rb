@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2020_07_25_043956) do
     t.datetime "reset_password_sent_at"
     t.integer "password"
     t.datetime "remember_created_at"
-    t.string "name", null: false
+    t.string "nickname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_casts_on_email", unique: true
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 2020_07_25_043956) do
     t.integer "password"
     t.integer "hostpassword"
     t.datetime "remember_created_at"
-    t.string "name", null: false
+    t.string "nickname"
     t.text "profile"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -86,29 +86,28 @@ ActiveRecord::Schema.define(version: 2020_07_25_043956) do
     t.text "hearing4"
     t.text "remarks"
     t.bigint "host_id"
-    t.bigint "casts_id"
-    t.bigint "gests_id"
+    t.bigint "cast_id"
+    t.bigint "gest_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["casts_id"], name: "index_kartes_on_casts_id"
-    t.index ["gests_id"], name: "index_kartes_on_gests_id"
+    t.index ["cast_id"], name: "index_kartes_on_cast_id"
+    t.index ["gest_id"], name: "index_kartes_on_gest_id"
     t.index ["host_id"], name: "index_kartes_on_host_id"
   end
 
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "content", null: false
     t.text "image"
-    t.bigint "group_id"
-    t.bigint "host_id", null: false
-    t.bigint "casts_id", null: false
-    t.bigint "gests_id", null: false
+    t.bigint "karte_id"
+    t.bigint "host_id"
+    t.bigint "cast_id"
+    t.bigint "gest_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["casts_id"], name: "index_messages_on_casts_id"
-    t.index ["gests_id"], name: "index_messages_on_gests_id"
-    t.index ["group_id"], name: "index_messages_on_group_id"
+    t.index ["cast_id"], name: "index_messages_on_cast_id"
+    t.index ["gest_id"], name: "index_messages_on_gest_id"
     t.index ["host_id"], name: "index_messages_on_host_id"
+    t.index ["karte_id"], name: "index_messages_on_karte_id"
   end
 
-  add_foreign_key "messages", "groups"
 end

@@ -15,7 +15,7 @@ class DeviseCreateHosts < ActiveRecord::Migration[5.2]
 
       ## Rememberable
       t.datetime :remember_created_at
-      t.string   :name, null: false
+      t.string   :nickname
       t.text     :profile
 
 

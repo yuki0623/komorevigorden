@@ -2,7 +2,7 @@
   .main-chat__header
     .left-box
       .talk-name
-        = "#{current_gest.name}とのtalk"
+        = "#{@karte.gest.nickname}とのtalk"
       .member-list
         %p Member:
         -# - @group.users.each do |user|
@@ -16,9 +16,25 @@
   .main-chat__messages
     -# = render @message
     .decoration
+    - if @messages
+      - @messages.each do |message|
+        .main-chat__messages__message
+          .data
+            .talker
+              - if message.host_id != nil
+                = message.host.nickname
+              - if message.cast_id != nil
+                = message.cast.nickname
+              - if message.gest_id != nil
+                = message.gest.nickname
+
+            .time
+              = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+          .content
+            = message.content
 
   .form
-    = form_for messages_index_path do |f|
+    = form_with(model: [@karte, @message], local: true) do |f|
       .new_message
         .input-box
           = f.text_field :content, class: 'input-box__message', placeholder: 'type a message' 
