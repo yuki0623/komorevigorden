@@ -65,7 +65,7 @@ gem 'devise'
 gem 'font-awesome-sass'
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'rack', '~> 2.2.3'
+gem 'rack', '~> 2.2.6'
 
 group :production do
   gem 'pg'
